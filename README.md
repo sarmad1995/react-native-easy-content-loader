@@ -4,7 +4,8 @@
 
 A light weight content loader for react native.
 
-![](header.png)
+![](react-native-easy-content-loader.gif)
+
 
 ## Installation
 
