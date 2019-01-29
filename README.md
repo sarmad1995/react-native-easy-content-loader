@@ -2,7 +2,7 @@
 [![NPM Version][npm-image]][npm-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
-A light weight content loader for react native.
+Hate simple simple spinners? Here is a light weight content loader for you.
 
 ![](react-native-easy-content-loader.gif)
 
