@@ -1,6 +1,6 @@
 {
   "name": "react-native-easy-content-loader",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "easy content loader for react-native apps",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,9 @@
   },
   "keywords": [
     "react-native",
-    "loader"
+    "loader",
+    "react-native-content-loader",
+    "skeleton"
   ],
   "author": "Sarmad",
   "license": "ISC",
