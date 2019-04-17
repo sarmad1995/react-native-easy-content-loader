@@ -48,7 +48,8 @@ import ContentLoader from 'react-native-easy-content-loader';
 
 ```
 
-
+For more examples
+https://snack.expo.io/@sarmad1995/cHJpdm
 ## API
 ## Title
 | Props | Default | Required | Type | Note |
@@ -81,6 +82,7 @@ import ContentLoader from 'react-native-easy-content-loader';
 | `primaryColor` | `rgba(195, 191, 191, 1)` | `NO` |  `rgba` | primary color.
 | `secondaryColor` | `rgba(218, 215, 215, 1)` | `NO` | `rgba`  | secondary color.
 | `animationDuration` | `500` | `NO` | `number`  | Animation duration during active.
+
 
 
 ## Release History
