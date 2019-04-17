@@ -27,24 +27,32 @@ import ContentLoader from 'react-native-easy-content-loader';
 ```
 ## Simple Example
 ```jsx
-        <ContentLoader active />
+<ContentLoader active />
 
 ```
 ## With Avatar
 ```jsx
-        <ContentLoader active avatar />
+<ContentLoader active avatar />
+
+```
+
+## With Loading State
+```jsx
+<ContentLoader active avatar loading={this.state.loading}>
+<Text>This would be rendered with loading is false</Text>
+</ContentLoader>
 
 ```
 
 ## Number of paragraphs
 ```jsx
-        <ContentLoader active avatar pRows={4}/>
+<ContentLoader active avatar pRows={4}/>
 
 ```
 
 ## Different Widths for differnt paragrahs lines
 ```jsx
-        <ContentLoader active avatar pRows={4} pWidth={["100%", 200, "25%"]}/>
+<ContentLoader active avatar pRows={4} pWidth={["100%", 200, "25%"]}/>
 
 ```
 
@@ -79,6 +87,7 @@ https://snack.expo.io/@sarmad1995/cHJpdm
 ## Config 
 | Props | Default | Required | Type | Note |
 |:---|:---:|:---:|:---:|:------|
+| `loading` | `null` | `NO` |  `bool` | if set, then it will render children when loading is false.
 | `primaryColor` | `rgba(195, 191, 191, 1)` | `NO` |  `rgba` | primary color.
 | `secondaryColor` | `rgba(218, 215, 215, 1)` | `NO` | `rgba`  | secondary color.
 | `animationDuration` | `500` | `NO` | `number`  | Animation duration during active.
