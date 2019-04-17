@@ -4,7 +4,8 @@
 ## react-native-easy-content-loader
 Hate simple spinners? Here is a light weight content loader for you.
 
-![](react-native-easy-content-loader.gif)
+![](content-loader-gif-1.gif)
+![](content-loader-gif-1.gif)
 
 ## Installation
 
