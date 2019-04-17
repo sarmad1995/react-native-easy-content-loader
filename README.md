@@ -2,135 +2,90 @@
 [![NPM Version][npm-image]][npm-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 ## react-native-easy-content-loader
-Hate simple spinners? Here is a light weight content loader for you.
+Provide a placeholder at the place which need waiting for loading,
+Easy to implement and fun to use
 
-![](content_loader_gif_2.gif)
-
-![](content_loading_gif_2.gif)
+![](gif1.gif) ![](gif2.gif)
 
 ## Installation
 
 ```sh
 npm install react-native-easy-content-loader --save
+yarn add react-native-easy-content-loader
 ```
 
-## Usage example
+## When Should we Use it#
+When resource needs long time to load, like low network speed.
+The component contains much information. Such as List.
+Only works when loading data at first time.
 
-## NOTE: 
-<pre>
-<b>style</b> property with  <b>height</b> and <b>width</b> is required for the child component sample
-</pre>
+
+Could be replaced by Spin in all situation, but provide better user experience than spin if it works.
 
 ```js
-import Loader from 'react-native-easy-content-loader';
+import ContentLoader from 'react-native-easy-content-loader';
+```
+## Simple Example
+```jsx
+        <ContentLoader active />
+
+```
+## With Avatar
+```jsx
+        <ContentLoader active avatar />
+
 ```
 
+## Number of paragraphs
 ```jsx
-<Loader
-    primaryColor='rgba(195, 191, 191, 1)'
-    secondaryColor='rgba(218, 215, 215, 1)'
-    animationDuration={500}
-    loading={this.state.loading}
- >
-    <View
-        style={{
-                height: 100 // required,
-                width: 200 // required,
-                borderRadius: 50,
-                backgroundColor: 'red'
-            }}
-        >
-         <Text>Test Content</Text>
-     </View>
- </Loader>
+        <ContentLoader active avatar pRows={4}/>
+
 ```
+
+## Different Widths for differnt paragrahs lines
+```jsx
+        <ContentLoader active avatar pRows={4} pWidth={["100%", 200, "25%"]}/>
+
+```
+
+
 ## API
+## Title
 | Props | Default | Required | Type | Note |
 |:---|:---:|:---:|:---:|:------|
-| `loading` | `false` | `YES` |  `bool` | If true, It will load the loading component with same styles givin to the child.
-| `primaryColor` | `'rgba(195, 191, 191, 1)'` | `NO` | `rgba`  | Primary color for the loading component.
-| `secondaryColor` | `'rgba(218, 215, 215, 1)'` | `NO` | `rgba`  | Secondary color for the loading component.
-| `animationDuration` | `500` | `NO` | `int`  | Animation duration for color switching between `primaryColor` and `secondaryColor`.
+| `title` | `true` | `NO` |  `bool` | If true, It will display a placeholder for title.
+| `tHeight` | `20` | `NO` | `number or string`  | Title height.
+| `tWidth` | `60%` | `NO` | `number or string`  | Title width.
+| `titleStyles` | `-` | `NO` | `styles`  | If you want to overide title styles`.
 
-## Real World Example
+## Paragraph
+| Props | Default | Required | Type | Note |
+|:---|:---:|:---:|:---:|:------|
+| `paragraph` | `true` | `NO` |  `bool` | If true, It will display a placeholder for paragraph.
+| `pHeight` | `20` | `NO` | `number or string`  | Paragraph line height.
+| `pWidth` | `60%` | `NO` | `number or array of number or percentages`  | Can specify same width with single value, Or could use array for different widths, eg ['100%', 200, 300]
+| `paragraphStyles` | `-` | `NO` | `styles`  | If you want to overide paragraph styles`.
 
-```jsx
-const { width, height } = Dimensions.get('screen');
-class Test extends React.Component {
-    state = {
-        loading: true
-    }
-    componentDidMount() {
-        setTimeout(() => this.setState({ loading: false }), 2000);
-    }
-    render() {
-        const { loading } = this.state;
-        return (
-            <View style={styles.container}>
-                <View style={styles.headerRow}>
+## Avatar
+| Props | Default | Required | Type | Note |
+|:---|:---:|:---:|:---:|:------|
+| `avatar` | `false` | `NO` |  `bool` | If true, It will display a placeholder for avatar.
+| `aSize` | `default` | `NO` | `'default' 'small' 'large' or number`  | avatar size.
+| `aShape` | `circle` | `NO` | `'circle' 'square'`  | Shape of avatar.
+| `reverse` | `false` | `NO` | `bool`  | Avatar would be rendered on right side.
+| `paragraphStyles` | `-` | `NO` | `styles`  | If you want to overide paragraph styles`.
 
-                    <View style={styles.leftContent}>
-                        <Loader loading={loading}>
-                            <Image
-                                source={{
-                                    uri: 'https://images.unsplash.com/photo-1548600518-98810c895859?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80'
-                                }}
-                                style={{
-                                    height: 50,
-                                    width: 50,
-                                    borderRadius: 25
-                                }}
-                            />
-                        </Loader>
-                        <View>
-                            <Loader loading={loading}>
-                                <View style={{ height: 20, width: (30 * width) / 100, marginLeft: 15 }}>
-                                    <Text>Jane Doe</Text>
-                                </View>
-                            </Loader>
-                            <Loader loading={loading}>
-                                <View style={{ height: 20, width: (30 * width) / 100, marginLeft: 15, marginTop: 10 }}>
-                                    <Text style={{ color: 'grey' }}>I am Jane Doe.</Text>
-                                </View>
-                            </Loader>
-                        </View>
+## Config 
+| Props | Default | Required | Type | Note |
+|:---|:---:|:---:|:---:|:------|
+| `primaryColor` | `rgba(195, 191, 191, 1)` | `NO` |  `rgba` | primary color.
+| `secondaryColor` | `rgba(218, 215, 215, 1)` | `NO` | `rgba`  | secondary color.
+| `animationDuration` | `500` | `NO` | `number`  | Animation duration during active.
 
-                    </View>
-
-                    <Loader loading={loading}>
-                        <View style={{ height: 20, width: 100, marginRight: 15 }}>
-                            <Text>01/02/19</Text>
-                        </View>
-                    </Loader>
-                </View>
-
-            </View>
-        );
-    }
-}
-const styles = StyleSheet.create({
-    container: {
-        flex: 1
-    },
-    headerRow: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        marginTop: 40,
-        marginHorizontal: 20
-    },
-    leftContent: {
-        flexDirection: 'row',
-        alignItems: 'center'
-    }
-});
-export default Test;
-
-
-```
 
 ## Release History
-
+* 0.0.5
+    * Beta
 * 0.0.1
     * Work in progress
 
