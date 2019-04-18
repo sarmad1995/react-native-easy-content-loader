@@ -5,7 +5,7 @@
 Provide a placeholder at the place which need waiting for loading,
 Easy to implement and fun to use
 
-![](gif1.gif) ![](gif2.gif)
+![](gif1.gif) ![](gif2.gif) ![](gif3.gif)
 
 ## Installation
 
@@ -39,7 +39,7 @@ import ContentLoader from 'react-native-easy-content-loader';
 ## With Loading State
 ```jsx
 <ContentLoader active avatar loading={this.state.loading}>
-<Text>This would be rendered with loading is false</Text>
+  <Text>This would be rendered with loading is false</Text>
 </ContentLoader>
 
 ```
