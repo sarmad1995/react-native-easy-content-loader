@@ -1,6 +1,6 @@
 {
   "name": "react-native-easy-content-loader",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "easy content loader for react-native apps",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,10 @@
     "react-native-content-loader",
     "skeleton"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sarmad1995/react-native-easy-content-loader"
+  },
   "author": "Sarmad",
   "license": "ISC",
   "dependencies": {
