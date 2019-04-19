@@ -85,7 +85,7 @@ class ContentLoader extends PureComponent {
     const avatarInitialStyles = {
       height: AVATAR_SIZE[aSize] || aSize,
       width: AVATAR_SIZE[aSize] || aSize,
-      borderRadius: aShape === "circle" ? "50%" : 3,
+      borderRadius: aShape === "circle" ? AVATAR_SIZE[aSize]/2 || aSize/2 : 3,
       marginRight: reverse ? 0 : 10,
       marginLeft: reverse ? 10 : 0
     };
