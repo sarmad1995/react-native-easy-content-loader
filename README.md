@@ -2,7 +2,7 @@
 [![Downloads Stats][npm-downloads]][npm-url]
 
 <p align="center">
-  <img width="400" alt="Example's react-native-easycontent-loader" src="https://github.com/sarmad1995/react-native-easy-content-loader/blob/master/assets/fb.gif" />
+  <img width="400" alt="Example's react-native-easycontent-loader" src="https://user-images.githubusercontent.com/38377482/63653305-932a1880-c788-11e9-8f74-aeb758e11336.gif" />
 </p>
 
 
@@ -163,7 +163,7 @@ import { Facebook } from 'react-native-easy-content-loader';
 <Facebook active />
 ```
 
-![Facebook Style](https://github.com/sarmad1995/react-native-easy-content-loader/blob/master/assets/fb.gif)
+![Facebook Style](https://user-images.githubusercontent.com/38377482/63653305-932a1880-c788-11e9-8f74-aeb758e11336.gif)
 
 
 
@@ -174,7 +174,7 @@ import { Instagram } from 'react-native-easy-content-loader';
 <Instagram active />
 ```
 
-![Instagram Style](https://github.com/sarmad1995/react-native-easy-content-loader/blob/master/assets/insta.gif)
+![Instagram Style](https://user-images.githubusercontent.com/38377482/63653295-7a216780-c788-11e9-9f02-88e5f71cd5cd.gif)
 
 
 
@@ -185,7 +185,7 @@ import { Bullets } from 'react-native-easy-content-loader';
 <Bullets active listSize={10} />
 ```
 
-![Bullets Style](https://github.com/sarmad1995/react-native-easy-content-loader/blob/master/assets/bullets.gif)
+![Bullets Style](https://user-images.githubusercontent.com/38377482/63653257-054e2d80-c788-11e9-8b15-eb8e1c39885e.gif)
 
 
 ### Default Style
@@ -197,9 +197,9 @@ import ContentLoader from 'react-native-easy-content-loader';
 <ContentLoader active listSize={10} />
 ```
 
-![ContentLoader Style](https://github.com/sarmad1995/react-native-easy-content-loader/blob/master/assets/default.gif)
+![ContentLoader Style](https://user-images.githubusercontent.com/38377482/63653286-5d852f80-c788-11e9-8093-2f428e7e3daf.gif)
 
-![ContentLoader Style](https://github.com/sarmad1995/react-native-easy-content-loader/blob/master/assets/default_color.gif)
+![ContentLoader Style](https://user-images.githubusercontent.com/38377482/63653283-434b5180-c788-11e9-84ee-f275a71334bc.gif)
 
                            |
 
