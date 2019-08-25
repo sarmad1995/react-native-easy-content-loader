@@ -1,45 +1,143 @@
 [![NPM Version][npm-image]][npm-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
-## react-native-easy-content-loader
+<p align="center">
+  <img width="400" alt="Example's react-native-easycontent-loader" src="https://github.com/sarmad1995/react-native-easy-content-loader/blob/feature/version2/assets/fb.gif" />
+</p>
+
 
 Provide a placeholder at the place which need waiting for loading,
 Easy to implement and fun to use
 
+## Features
+
+- :gear: **Customizable:** Feel free to change the colors, speed, sizes, paragraphs, title and much more.;
+- ⚛️ **Lightweight:** Lightweight with only neccessory code.;
+
 ![](gif1.gif) ![](gif2.gif) ![](gif3.gif)
 
-## Installation
+## Index
+
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Options](#options)
+- [Examples](#examples)
+
+## Getting Started
 
 ```sh
 npm install react-native-easy-content-loader --save
 yarn add react-native-easy-content-loader
 ```
 
-## When Should we Use it
+## Usage
 
-When resource needs long time to load, like low network speed.
-The component contains much information. Such as List.
-Only works when loading data at first time.
-
-Could be replaced by Spin in all situation, but provide better user experience than spin if it works.
-
-```js
-import ContentLoader from "react-native-easy-content-loader";
+```jsx
+import ContentLoader, { Facebook, Instagram, Bullets } from 'react-native-easy-content-loader';
 ```
+```jsx
+<ContentLoader active />
+```
+## Options
+## These Options are common with every component, 
 
-## Simple Example
+#### **`primaryColor?: string, rgba/hex`**
+Defaults to `rgba(220, 220, 220, 1)`.
+
+#### **`secondaryColor? string, rgba/hex`**
+Defaults to `rgba(200, 200, 200, 1)`.
+
+#### **`animationDuration? number`**
+Defaults to `500`. The animation transition time from primaryColor to secondaryColor
+
+#### **`loading?: bool | null`**
+Defaults to `null`, If given a bool value, when false, it will return children (Works as a wrapper component)
+
+#### **`active? bool`**
+Defaults to `false`, `true` if you want to animate the compoennt.
+
+#### **`title? bool`**
+Defaults to `true`. If you want to show the title, **Works only with ContentLoader**.
+
+#### **`titleStyles? object`**
+Add styles to title.
+
+#### **`listSize? number`**
+Defaults to `1`. If you want to render a list of loaders, **Works with all the loaders**.
+
+#### **`avatar? bool`**
+Defaults to `false`. If you want to render the avatar.
+
+#### **`aShape? string 'circle' | 'square'`**
+Defaults to `circle`. shape of the avatar, can be circle or square.
+
+#### **`aSize? string 'default' 'small' 'large' | number `** 
+Defaults to `default`. can be a specific number.
+
+#### **`reverse? bool`** 
+Defaults to `false`. if you want to reverse the view.
+
+#### **`containerStyles? object`** 
+If you want to add style to container.
+
+
+## Title specific options.
+
+#### **`tHeight? string | number`** 
+Used to change the title height.
+
+#### **`tWidth? stirng | number`** 
+Used to change the title width.
+
+#### **`sTHeight? string | number`**
+Used to change the secondary title height  **Works with only Facebook and Instagram**.
+
+#### **`sTWidth? string | number`**
+Used to change the secondary title width  **Works with only Facebook and Instagram**.
+
+#### **`titleStyles? object`**
+Add styles to title.
+
+#### **`secondaryTitleStyles? object`**
+Add styles to secondaryTitle.  **Works with only Facebook and Instagram**.
+
+## Paragraph specific options.
+
+#### **`pHeight? string | number`** 
+Paragraph line height
+
+#### **`pWidth? string | number | array `** 
+Can specify same width with single value, Or could use array for different widths, eg ['100%', 200, 300]
+
+#### **`paragraphStyles? objecct`** 
+Add paragraph styles
+
+
+## Instagram specific options.
+
+#### **`imageHeight? number`** 
+Change the height of the image
+
+#### **`imageStyles? number`** 
+Add styles to image 
+
+
+## Examples
+
+
+### Simple Example
 
 ```jsx
 <ContentLoader active />
 ```
 
-## With Avatar
+### With Avatar
 
 ```jsx
 <ContentLoader active avatar />
 ```
 
-## With Loading State
+### With Loading State
 
 ```jsx
 <ContentLoader active avatar loading={this.state.loading}>
@@ -47,66 +145,70 @@ import ContentLoader from "react-native-easy-content-loader";
 </ContentLoader>
 ```
 
-## Number of paragraphs
+### Number of paragraphs
 
 ```jsx
 <ContentLoader active avatar pRows={4} />
 ```
 
-## Different Widths for differnt paragrahs lines
+### Different Widths for differnt paragrahs lines
 
 ```jsx
 <ContentLoader active avatar pRows={4} pWidth={["100%", 200, "25%", 45]} />
 ```
 
-For more examples
-https://snack.expo.io/@sarmad1995/cHJpdm
+### Facebook Style
+```jsx
+import { Facebook } from 'react-native-easy-content-loader';
 
-## API
+<Facebook active />
+```
 
-## Title
+![Facebook Style](https://github.com/sarmad1995/react-native-easy-content-loader/blob/feature/version2/assets/fb.gif)
 
-| Props         | Default | Required |        Type        | Note                                              |
-| :------------ | :-----: | :------: | :----------------: | :------------------------------------------------ |
-| `title`       | `true`  |   `NO`   |       `bool`       | If true, It will display a placeholder for title. |
-| `tHeight`     |  `20`   |   `NO`   | `number or string` | Title height.                                     |
-| `tWidth`      |  `60%`  |   `NO`   | `number or string` | Title width.                                      |
-| `titleStyles` |   `-`   |   `NO`   |      `styles`      | If you want to overide title styles`.             |
 
-## Paragraph
 
-| Props             | Default | Required |                    Type                    | Note                                                                                                     |
-| :---------------- | :-----: | :------: | :----------------------------------------: | :------------------------------------------------------------------------------------------------------- |
-| `paragraph`       | `true`  |   `NO`   |                   `bool`                   | If true, It will display a placeholder for paragraph.                                                    |
-| `pHeight`         |  `20`   |   `NO`   |             `number or string`             | Paragraph line height.                                                                                   |
-| `pWidth`          |  `60%`  |   `NO`   | `number or array of number or percentages` | Can specify same width with single value, Or could use array for different widths, eg ['100%', 200, 300] |
-| `paragraphStyles` |   `-`   |   `NO`   |                  `styles`                  | If you want to overide paragraph styles`.                                                                |
+### Instagram Style
+```jsx
+import { Instagram } from 'react-native-easy-content-loader';
 
-## Avatar
+<Instagram active />
+```
 
-| Props             |  Default  | Required |                 Type                  | Note                                               |
-| :---------------- | :-------: | :------: | :-----------------------------------: | :------------------------------------------------- |
-| `avatar`          |  `false`  |   `NO`   |                `bool`                 | If true, It will display a placeholder for avatar. |
-| `aSize`           | `default` |   `NO`   | `'default' 'small' 'large' or number` | avatar size.                                       |
-| `aShape`          | `circle`  |   `NO`   |          `'circle' 'square'`          | Shape of avatar.                                   |
-| `reverse`         |  `false`  |   `NO`   |                `bool`                 | Avatar would be rendered on right side.            |
-| `paragraphStyles` |    `-`    |   `NO`   |               `styles`                | If you want to overide paragraph styles`.          |
+![Instagram Style](https://github.com/sarmad1995/react-native-easy-content-loader/blob/feature/version2/assets/insta.gif)
 
-## Config
 
-| Props               |         Default          | Required |   Type   | Note                                                        |
-| :------------------ | :----------------------: | :------: | :------: | :---------------------------------------------------------- |
-| `loading`           |          `null`          |   `NO`   |  `bool`  | if set, then it will render children when loading is false. |
-| `primaryColor`      | `rgba(195, 191, 191, 1)` |   `NO`   |  `rgba`  | primary color.                                              |
-| `secondaryColor`    | `rgba(218, 215, 215, 1)` |   `NO`   |  `rgba`  | secondary color.                                            |
-| `animationDuration` |          `500`           |   `NO`   | `number` | Animation duration during active.                           |
+
+### Bullets Style
+```jsx
+import { Bullets } from 'react-native-easy-content-loader';
+
+<Bullets active listSize={10} />
+```
+
+![Bullets Style](https://github.com/sarmad1995/react-native-easy-content-loader/blob/feature/version2/assets/bullets.gif)
+
+
+### Default Style
+
+## It is highly customizable, please refer the options sections.
+```jsx
+import ContentLoader from 'react-native-easy-content-loader';
+
+<ContentLoader active listSize={10} />
+```
+
+![ContentLoader Style](https://github.com/sarmad1995/react-native-easy-content-loader/blob/feature/version2/assets/default.gif)
+
+![ContentLoader Style](https://github.com/sarmad1995/react-native-easy-content-loader/blob/feature/version2/assets/default_color.gif)
+
+                           |
 
 ## Release History
+See <a href="https://github.com/sarmad1995/react-native-easy-content-loader/blob/feature/version2/CHANGE_LOG.md"> CHANGE_LOG.md</a>.     
 
-- 0.0.5
-  - Beta
-- 0.0.1
-  - Work in progress
+
+
 
 ## Contributing
 
