@@ -1,10 +1,10 @@
-- 0.0.5
+##- 0.0.5
   - Beta
-- 0.0.1
+##- 0.0.1
   - Work in progress
-- 0.1.0
+##- 0.1.0
   - Initial Release
-- 0.2.0
+##- 0.2.0
 ## BREAKING CHANGES
 Changed the default Title and Paragraph height.
 
