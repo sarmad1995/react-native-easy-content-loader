@@ -8,18 +8,20 @@
   },
   "keywords": [
     "react-native",
-    "loader",
+    "react native skeleton",
     "react-native-content-loader",
-    "skeleton"
+    "skeleton",
+    "react native loader"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/sarmad1995/react-native-easy-content-loader"
   },
   "author": "Sarmad",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "prop-types": "^15.6.2",
-    "react": "^16.7.0"
+    "react": "^16.7.0",
+    "hex-to-rgba": "^2.0.1"
   }
 }
