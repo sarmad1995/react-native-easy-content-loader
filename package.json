@@ -1,6 +1,6 @@
 {
   "name": "react-native-easy-content-loader",
-  "version": "0.1.2",
+  "version": "0.2.1",
   "description": "easy content loader for react-native apps",
   "main": "index.js",
   "scripts": {

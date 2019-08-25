@@ -2,7 +2,7 @@
 [![Downloads Stats][npm-downloads]][npm-url]
 
 <p align="center">
-  <img width="400" alt="Example's react-native-easycontent-loader" src="https://github.com/sarmad1995/react-native-easy-content-loader/blob/feature/version2/assets/fb.gif" />
+  <img width="400" alt="Example's react-native-easycontent-loader" src="https://github.com/sarmad1995/react-native-easy-content-loader/blob/master/assets/fb.gif" />
 </p>
 
 
@@ -14,7 +14,6 @@ Easy to implement and fun to use
 - :gear: **Customizable:** Feel free to change the colors, speed, sizes, paragraphs, title and much more.;
 - ⚛️ **Lightweight:** Lightweight with only neccessory code.;
 
-![](gif1.gif) ![](gif2.gif) ![](gif3.gif)
 
 ## Index
 
@@ -164,7 +163,7 @@ import { Facebook } from 'react-native-easy-content-loader';
 <Facebook active />
 ```
 
-![Facebook Style](https://github.com/sarmad1995/react-native-easy-content-loader/blob/feature/version2/assets/fb.gif)
+![Facebook Style](https://github.com/sarmad1995/react-native-easy-content-loader/blob/master/assets/fb.gif)
 
 
 
@@ -175,7 +174,7 @@ import { Instagram } from 'react-native-easy-content-loader';
 <Instagram active />
 ```
 
-![Instagram Style](https://github.com/sarmad1995/react-native-easy-content-loader/blob/feature/version2/assets/insta.gif)
+![Instagram Style](https://github.com/sarmad1995/react-native-easy-content-loader/blob/master/assets/insta.gif)
 
 
 
@@ -186,7 +185,7 @@ import { Bullets } from 'react-native-easy-content-loader';
 <Bullets active listSize={10} />
 ```
 
-![Bullets Style](https://github.com/sarmad1995/react-native-easy-content-loader/blob/feature/version2/assets/bullets.gif)
+![Bullets Style](https://github.com/sarmad1995/react-native-easy-content-loader/blob/master/assets/bullets.gif)
 
 
 ### Default Style
@@ -198,9 +197,9 @@ import ContentLoader from 'react-native-easy-content-loader';
 <ContentLoader active listSize={10} />
 ```
 
-![ContentLoader Style](https://github.com/sarmad1995/react-native-easy-content-loader/blob/feature/version2/assets/default.gif)
+![ContentLoader Style](https://github.com/sarmad1995/react-native-easy-content-loader/blob/master/assets/default.gif)
 
-![ContentLoader Style](https://github.com/sarmad1995/react-native-easy-content-loader/blob/feature/version2/assets/default_color.gif)
+![ContentLoader Style](https://github.com/sarmad1995/react-native-easy-content-loader/blob/master/assets/default_color.gif)
 
                            |
 
