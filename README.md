@@ -13,6 +13,7 @@ Easy to implement and fun to use
 
 - :gear: **Customizable:** Feel free to change the colors, speed, sizes, paragraphs, title and much more.;
 - ⚛️ **Lightweight:** Lightweight with only neccessory code.;
+- Fully typed with typescript.
 
 
 ## Index
