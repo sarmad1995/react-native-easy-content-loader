@@ -1,6 +1,6 @@
 {
   "name": "react-native-easy-content-loader",
-  "version": "0.2.3-beta.0",
+  "version": "0.2.3",
   "description": "easy content loader for react-native apps",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
