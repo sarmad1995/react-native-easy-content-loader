@@ -1,12 +1,15 @@
-import React, { PureComponent } from 'react';
-import { Animated, View, StyleSheet } from 'react-native';
-import PropTypes from 'prop-types';
+import * as React from "react";
+import { Animated, View, StyleSheet, ViewStyle } from 'react-native';
 import {
   getInterpolatedColor,
   startAnimationHelper,
-  commonPropTypes,
   commonDefaultProps,
-  paragraphInitialStyles
+  paragraphInitialStyles,
+  CommonProps,
+  PHeightType,
+  PWidthType,
+  THeightType,
+  TWidthType
 } from './shared';
 
 const AVATAR_SIZE = {
@@ -14,14 +17,51 @@ const AVATAR_SIZE = {
   large: 30,
   small: 25
 };
-
-class ContentLoader extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
+interface Props extends CommonProps {
+  /**
+   * Used to determine height of the paragraph line.
+   */
+  pHeight: PHeightType,
+  /**
+   * Used to determine the width of the paragraph lines, If you want dymanic widths for each line, you can add an array 
+   * [100,200,300] 
+   */
+  pWidth: PWidthType,
+  /**
+   * Used to determine how many paragraph rows should be rendered.
+   */
+  pRows: number,
+  /**
+   * Add additional styles or overwrite previous ones 
+   */
+  paragraphStyles?: ViewStyle,
+  /**
+   * Used to determine the height of the main title
+   */
+  tHeight: THeightType,
+  /**
+   * Used to determine the width of the main title
+   */
+  tWidth: TWidthType,
+  /**
+   * Add additional styles or overwrite previous ones
+   */
+  secondaryTitleStyles?: ViewStyle,
+  /**
+   * Used to determine the height of the secondary title
+   */
+  sTWidth: string | number,
+  /**
+   * Used to determine the width of the secondary title
+   */
+  avatarStyles?: ViewStyle
+}
+class ContentLoader extends React.PureComponent<Props> {
+  static defaultProps: Props;
+  state = {
       animation: new Animated.Value(0)
-    };
-  }
+  };
+  
 
   componentDidMount() {
     const { active } = this.props;
@@ -86,7 +126,7 @@ class ContentLoader extends PureComponent {
     const avatarInitialStyles = {
       height: AVATAR_SIZE[aSize] || aSize,
       width: AVATAR_SIZE[aSize] || aSize,
-      borderRadius: aShape === 'circle' ? AVATAR_SIZE[aSize] / 2 || aSize / 2 : 3,
+      borderRadius: aShape === 'circle' ? AVATAR_SIZE[aSize] / 2 || (aSize as any) / 2 : 3,
       marginRight: reverse ? 0 : 10,
       marginLeft: reverse ? 10 : 0
     };
@@ -145,17 +185,6 @@ class ContentLoader extends PureComponent {
   }
 }
 
-ContentLoader.propTypes = {
-  ...commonPropTypes,
-  pHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  pWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
-  pRows: PropTypes.number,
-  tWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  tHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  sTWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  paragraphStyles: PropTypes.object,
-  secondaryTitleStyles: PropTypes.object
-};
 ContentLoader.defaultProps = {
   ...commonDefaultProps,
   pHeight: 7,

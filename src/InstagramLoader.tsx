@@ -1,27 +1,58 @@
-import React, { PureComponent } from 'react';
-import { Animated, View, StyleSheet } from 'react-native';
-import PropTypes from 'prop-types';
+import * as React from "react";
+import { Animated, View, StyleSheet, ViewStyle } from 'react-native';
 import {
   getInterpolatedColor,
-  commonPropTypes,
+  startAnimationHelper,
   commonDefaultProps,
-  startAnimationHelper
+  CommonProps, 
+  THeightType,
+  TWidthType
 } from './shared';
 
 const AVATAR_SIZE = {
-  default: 20,
+  default: 60,
   large: 30,
   small: 25
 };
-
-class ContentLoader extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
+interface Props extends CommonProps {
+  /**
+   * Used to determine the height of the main title.
+   */
+  tHeight: THeightType,
+  /**
+   * Used to determine the width of the main title.
+   */
+  tWidth: TWidthType,
+  /**
+   * Used to determine the height of secondary title.
+   */
+  sTHeight: string | number,
+  /**
+   * Used to determine the width of secondary title.
+   */
+  sTWidth: string | number,
+  /**
+   * add additinal imageStyles or overwrite previous ones.
+   */
+  imageStyles?: ViewStyle,
+  /**
+   * Used to determine height of the image
+   */
+  imageHeight: string | number,
+  /**
+   * add additional avatarStyles or overwrite them
+   */
+  avatarStyles?: ViewStyle
+  /**
+   * add additional secondary title styles or overwrite them.
+   */
+  secondaryTitleStyles?: ViewStyle
+}
+class ContentLoader extends React.PureComponent<Props> {
+  static defaultProps: Props;
+  state = {
       animation: new Animated.Value(0)
-    };
   }
-
   componentDidMount() {
     const { active } = this.props;
     if (active) {
@@ -46,15 +77,20 @@ class ContentLoader extends PureComponent {
 
   render() {
     const {
+      imageStyles,
+      sTHeight,
+      sTWidth,
       tHeight,
       tWidth,
       titleStyles,
+      secondaryTitleStyles,
       aShape,
       aSize,
       avatarStyles,
       reverse,
       containerStyles,
       loading,
+      imageHeight,
       listSize,
       primaryColor,
       secondaryColor,
@@ -63,22 +99,29 @@ class ContentLoader extends PureComponent {
     const { animation } = this.state;
 
     const interpolatedBackground = getInterpolatedColor(animation, primaryColor, secondaryColor);
-
     if (loading === false) {
       return children || null;
     }
-
+    const imageInitialStyles = {
+      height: imageHeight,
+      width: '100%'
+    };
     const titleInitialStyles = {
       height: tHeight,
       width: tWidth
     };
+    const secondaryTitleInitialStyles = {
+      height: sTHeight,
+      width: sTWidth
+    };
     const avatarInitialStyles = {
       height: AVATAR_SIZE[aSize] || aSize,
       width: AVATAR_SIZE[aSize] || aSize,
-      borderRadius: aShape === 'circle' ? AVATAR_SIZE[aSize] / 2 || aSize / 2 : 3,
+      borderRadius: aShape === 'circle' ? AVATAR_SIZE[aSize] / 2 || (aSize as any) / 2 : 3,
       marginRight: reverse ? 0 : 5,
       marginLeft: reverse ? 5 : 0
     };
+
     return [...Array(listSize)].map((_, index) => (
       <View key={index} style={{ width: '100%', marginVertical: 8 }}>
         <View
@@ -106,22 +149,39 @@ class ContentLoader extends PureComponent {
                 { backgroundColor: interpolatedBackground }
               ]}
             />
+            <Animated.View
+              style={[
+                styles.secondaryTitle,
+                secondaryTitleInitialStyles,
+                secondaryTitleStyles,
+                { backgroundColor: interpolatedBackground }
+              ]}
+            />
           </View>
+        </View>
+        <View style={styles.ImageContainer}>
+          <Animated.View
+            style={[
+              styles.image,
+              imageInitialStyles,
+              imageStyles,
+              { backgroundColor: interpolatedBackground }
+            ]}
+          />
         </View>
       </View>
     ));
   }
 }
 
-ContentLoader.propTypes = {
-  ...commonPropTypes,
-  tWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  tHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-};
 ContentLoader.defaultProps = {
   ...commonDefaultProps,
-  tWidth: '80%',
-  tHeight: 10
+  sTWidth: '25%',
+  tWidth: '40%',
+  tHeight: 13,
+  imageHeight: 200,
+  imageStyles: {},
+  sTHeight: 7
 };
 const styles = StyleSheet.create({
   container: {
@@ -138,11 +198,20 @@ const styles = StyleSheet.create({
     borderRadius: 2
   },
   title: {
+    marginBottom: 10,
     borderRadius: 3
   },
-  paragraph: {
-    marginVertical: 5,
+  secondaryTitle: {
     borderRadius: 3
+  },
+  image: {
+    marginVertical: 5,
+    borderRadius: 5
+  },
+
+  ImageContainer: {
+    paddingHorizontal: 12,
+    marginTop: 10
   }
 });
 export default ContentLoader;

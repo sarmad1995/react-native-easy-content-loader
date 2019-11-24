@@ -1,12 +1,17 @@
-import React, { PureComponent } from 'react';
-import { Animated, View, StyleSheet } from 'react-native';
-import PropTypes from 'prop-types';
+import * as React from "react";
+
+import { Animated, View, StyleSheet, ViewStyle } from 'react-native';
+
 import {
   getInterpolatedColor,
-  commonPropTypes,
   commonDefaultProps,
   startAnimationHelper,
-  paragraphInitialStyles
+  paragraphInitialStyles,
+  CommonProps,
+  PHeightType,
+  PWidthType,
+  TWidthType,
+  THeightType,
 } from './shared';
 /**
  * default content loader .
@@ -14,20 +19,61 @@ import {
  * can be customized to the needs, .
  *
  */
-const AVATAR_SIZE = {
+interface ContentLoaderAvatar {
+  default: string | number,
+  large: string | number ,
+  small: string | number
+}
+const AVATAR_SIZE: ContentLoaderAvatar= {
   default: 50,
   large: 70,
   small: 35
-};
+}
+interface Props extends CommonProps {
+  /**
+   * Enables or disables paragraph lines.
+   */
+  paragraph?: boolean,
+  /**
+   * Used to determine height of the paragraph line.
+   */
+  pHeight: PHeightType,
+  /**
+   * Duration of fade animation, default = 500ms
+   */
+  animationDuration: number,
+  /**
+   * Used to determine the width of the paragraph lines, If you want dymanic widths for each line, you can add an array 
+   * [100,200,300] 
+   */
+  pWidth: PWidthType
+  /**
+   * Used to determine how many paragraph rows should be rendered.
+   */
+  pRows: number,
+  /**
+   * Used to determine the width of the title.
+   */
+  tWidth: TWidthType,
+  /**
+   * Used to determine the height of the title
+   */
+  tHeight: THeightType,
+  /**
+   * If you want to add additional styles/overwrite styles of paragraph
+   */
+  paragraphStyles?: ViewStyle,
+  /**
+    * If you want to add additional styles/overwrite styles of avatar
+   */
+  avatarStyles?: ViewStyle
+}
 
-class ContentLoader extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      animation: new Animated.Value(0)
-    };
-  }
-
+class ContentLoader extends React.PureComponent<Props> {
+  static defaultProps: Props;
+  state = {
+    animation: new Animated.Value(0)
+  };
   componentDidMount() {
     const { active } = this.props;
     if (active) {
@@ -35,7 +81,7 @@ class ContentLoader extends PureComponent {
     }
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps: Props) {
     const { loading } = this.props;
     if (prevProps.loading !== loading) {
       if (loading) {
@@ -44,7 +90,7 @@ class ContentLoader extends PureComponent {
     }
   }
 
-  startAnimation = () => {
+  private startAnimation= (): void=> {
     const { animation } = this.state;
     const { animationDuration } = this.props;
     startAnimationHelper(animation, animationDuration);
@@ -80,14 +126,14 @@ class ContentLoader extends PureComponent {
     if (loading === false) {
       return children || null;
     }
-    const titleInitialStyles = {
+    const titleInitialStyles: ViewStyle = {
       height: tHeight,
       width: tWidth
     };
-    const avatarInitialStyles = {
-      height: AVATAR_SIZE[aSize] || aSize,
-      width: AVATAR_SIZE[aSize] || aSize,
-      borderRadius: aShape === 'circle' ? AVATAR_SIZE[aSize] / 2 || aSize / 2 : 3,
+    const avatarInitialStyles: ViewStyle = {
+      height: (AVATAR_SIZE as any)[aSize] || aSize,
+      width: (AVATAR_SIZE as any)[aSize] || aSize,
+      borderRadius: aShape === 'circle' ? (AVATAR_SIZE as any)[aSize] / 2 || (aSize as any) / 2 : 3,
       marginRight: reverse ? 0 : 10,
       marginLeft: reverse ? 10 : 0
     };
@@ -142,17 +188,6 @@ class ContentLoader extends PureComponent {
     ));
   }
 }
-
-ContentLoader.propTypes = {
-  ...commonPropTypes,
-  paragraph: PropTypes.bool,
-  pHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  pWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
-  pRows: PropTypes.number,
-  tWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  tHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  paragraphStyles: PropTypes.object
-};
 ContentLoader.defaultProps = {
   ...commonDefaultProps,
   paragraph: true,
@@ -183,7 +218,6 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     borderRadius: 3
   },
-
   paragraphContainer: {}
 });
 export default ContentLoader;

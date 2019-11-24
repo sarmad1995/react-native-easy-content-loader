@@ -1,10 +1,10 @@
-##- 0.0.5
+## - 0.0.5
   - Beta
-##- 0.0.1
+## - 0.0.1
   - Work in progress
-##- 0.1.0
+## - 0.1.0
   - Initial Release
-##- 0.2.0
+## - 0.2.0
 ## BREAKING CHANGES
 Changed the default Title and Paragraph height.
 
@@ -14,3 +14,12 @@ Changed the default Title and Paragraph height.
 - Added Bullet style.
 - Added List functionality.
 - Add support for hex colors.
+
+## - 0.2.3
+## BREAKING CHANGES
+No breaking changes :)
+
+## FEATURES
+- Typescript support.
+- Fully typed.
+- Removed extra things from npm, will be more lighter weight now.
