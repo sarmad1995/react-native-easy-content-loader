@@ -4,7 +4,7 @@ import { Animated, ViewStyle } from 'react-native';
 export type WidthArrayType = number | string;
 export type AShapeType = 'circle'|'square';
 export type ASizeType = string | number | 'small' | 'large' | 'default';
-export type PHeightType = string | number;
+export type PHeightType = string | number | Array<string|number>;
 export type PWidthType = string | number | Array<WidthArrayType>;
 export type TWidthType = string | number;
 export type THeightType = string | number;
@@ -35,10 +35,13 @@ export const getInterpolatedColor = (animation: Animated.Value, primaryColor: Co
   });
 
 export const paragraphInitialStyles = (index: number, pHeight: PHeightType, pWidth: PWidthType) => {
-  const height = pHeight;
+  let height = pHeight;
   let width = pWidth;
   if ( pWidth.constructor === Array) {
     width = pWidth[index] || '100%';
+  }
+  if (pHeight.constructor === Array) {
+    height = pHeight[index] || 8
   }
   return {
     height,

@@ -41,6 +41,7 @@
     "react-native": "*"
   },
   "dependencies": {
+    "@sarmad1995/react-native-content-loader": "^0.2.4",
     "hex-to-rgba": "^2.0.1"
   }
 }

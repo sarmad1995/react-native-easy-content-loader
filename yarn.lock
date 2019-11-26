@@ -18,6 +18,13 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
+"@sarmad1995/react-native-content-loader@^0.2.4":
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/@sarmad1995/react-native-content-loader/-/react-native-content-loader-0.2.4.tgz#b24f110534045f34ecb22ef3ee3ca0e5a8baa04e"
+  integrity sha512-GSYDYbXLC6/xW45wAffdr3AlkXyo7NqlA0M9rqnXoTkk5TFhGMRBPfA7jakpaS2WtzkaOsh67VPAtlxIXigqiw==
+  dependencies:
+    hex-to-rgba "^2.0.1"
+
 "@types/prop-types@*":
   version "15.7.3"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"

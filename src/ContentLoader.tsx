@@ -16,8 +16,8 @@ import {
 /**
  * default content loader .
  *
- * can be customized to the needs, .
  *
+ * can be customized to the needs, .
  */
 interface ContentLoaderAvatar {
   default: string | number,
