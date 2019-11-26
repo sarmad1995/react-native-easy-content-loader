@@ -26,14 +26,14 @@ Easy to implement and fun to use
 ## Getting Started
 
 ```sh
-npm install react-native-easy-content-loader --save
-yarn add react-native-easy-content-loader
+npm install react-native-content-loader --save
+yarn add react-native-content-loader
 ```
 
 ## Usage
 
 ```jsx
-import ContentLoader, { Facebook, Instagram, Bullets } from 'react-native-easy-content-loader';
+import ContentLoader, { Facebook, Instagram, Bullets } from 'react-native-content-loader';
 ```
 ```jsx
 <ContentLoader active />
@@ -159,7 +159,7 @@ Add styles to image
 
 ### Facebook Style
 ```jsx
-import { Facebook } from 'react-native-easy-content-loader';
+import { Facebook } from 'react-native-content-loader';
 
 <Facebook active />
 ```
@@ -170,7 +170,7 @@ import { Facebook } from 'react-native-easy-content-loader';
 
 ### Instagram Style
 ```jsx
-import { Instagram } from 'react-native-easy-content-loader';
+import { Instagram } from 'react-native-content-loader';
 
 <Instagram active />
 ```
@@ -181,7 +181,7 @@ import { Instagram } from 'react-native-easy-content-loader';
 
 ### Bullets Style
 ```jsx
-import { Bullets } from 'react-native-easy-content-loader';
+import { Bullets } from 'react-native-content-loader';
 
 <Bullets active listSize={10} />
 ```
@@ -193,7 +193,7 @@ import { Bullets } from 'react-native-easy-content-loader';
 
 ## It is highly customizable, please refer the options sections.
 ```jsx
-import ContentLoader from 'react-native-easy-content-loader';
+import ContentLoader from 'react-native-content-loader';
 
 <ContentLoader active listSize={10} />
 ```
@@ -205,7 +205,7 @@ import ContentLoader from 'react-native-easy-content-loader';
                            |
 
 ## Release History
-See <a href="https://github.com/sarmad1995/react-native-easy-content-loader/blob/feature/version2/CHANGE_LOG.md"> CHANGE_LOG.md</a>.     
+See <a href="https://github.com/sarmad1995/react-native-content-loader/blob/feature/version2/CHANGE_LOG.md"> CHANGE_LOG.md</a>.     
 
 
 
@@ -216,6 +216,6 @@ Feel free to contribute, this is still in beta and I have plans to include more 
 
 <!-- Markdown link & img dfn's -->
 
-[npm-image]: https://img.shields.io/npm/v/react-native-easy-content-loader.svg
-[npm-url]: https://www.npmjs.com/search?q=react-native-easy-content-loader
-[npm-downloads]: https://img.shields.io/npm/dm/react-native-easy-content-loader.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/react-native-content-loader.svg
+[npm-url]: https://www.npmjs.com/search?q=react-native-content-loader
+[npm-downloads]: https://img.shields.io/npm/dm/react-native-content-loader.svg?style=flat-square

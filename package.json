@@ -1,5 +1,5 @@
 {
-  "name": "react-native-easy-content-loader",
+  "name": "@sarmad1995/react-native-content-loader",
   "version": "0.2.4",
   "description": "easy content loader for react-native apps",
   "main": "lib/index.js",
@@ -14,17 +14,18 @@
     "react-native",
     "react native skeleton",
     "react-native-content-loader",
+    "react-native-content-loader",
     "skeleton",
     "react native loader"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/sarmad1995/react-native-easy-content-loader"
+    "url": "https://github.com/sarmad1995/react-native-content-loader"
   },
   "bugs": {
-    "url": "https://github.com/sarmad1995/react-native-easy-content-loader/issues"
+    "url": "https://github.com/sarmad1995/react-native-content-loader/issues"
   },
-  "homepage": "https://github.com/sarmad1995/react-native-easy-content-loader",
+  "homepage": "https://github.com/sarmad1995/react-native-content-loader",
   "author": "Sarmad",
   "license": "MIT",
   "devDependencies": {
