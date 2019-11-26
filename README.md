@@ -7,7 +7,10 @@
 
 
 Provide a placeholder at the place which need waiting for loading,
-Easy to implement and fun to use
+Easy to implement and fun to use, this package is highly customizable, Please go throw docs to find info :).
+
+## 
+Npm package is now [@sarmad1995/react-native-background-geolocation](https://www.npmjs.com/package/@sarmad1995/react-native-content-loader)!
 
 ## Features
 
@@ -26,14 +29,14 @@ Easy to implement and fun to use
 ## Getting Started
 
 ```sh
-npm install react-native-content-loader --save
-yarn add react-native-content-loader
+npm install @sarmad1995/react-native-content-loader --save
+yarn add @sarmad1995/react-native-content-loader
 ```
 
 ## Usage
 
 ```jsx
-import ContentLoader, { Facebook, Instagram, Bullets } from 'react-native-content-loader';
+import ContentLoader, { Facebook, Instagram, Bullets } from '@sarmad1995/react-native-content-loader';
 ```
 ```jsx
 <ContentLoader active />
@@ -159,7 +162,7 @@ Add styles to image
 
 ### Facebook Style
 ```jsx
-import { Facebook } from 'react-native-content-loader';
+import { Facebook } from '@sarmad1995/react-native-content-loader';
 
 <Facebook active />
 ```
@@ -170,7 +173,7 @@ import { Facebook } from 'react-native-content-loader';
 
 ### Instagram Style
 ```jsx
-import { Instagram } from 'react-native-content-loader';
+import { Instagram } from '@sarmad1995/react-native-content-loader';
 
 <Instagram active />
 ```
@@ -181,7 +184,7 @@ import { Instagram } from 'react-native-content-loader';
 
 ### Bullets Style
 ```jsx
-import { Bullets } from 'react-native-content-loader';
+import { Bullets } from '@sarmad1995/react-native-content-loader';
 
 <Bullets active listSize={10} />
 ```
@@ -205,7 +208,7 @@ import ContentLoader from 'react-native-content-loader';
                            |
 
 ## Release History
-See <a href="https://github.com/sarmad1995/react-native-content-loader/blob/feature/version2/CHANGE_LOG.md"> CHANGE_LOG.md</a>.     
+See <a href="https://github.com/sarmad1995/react-native-content-loader/blob/master/CHANGE_LOG.md"> CHANGE_LOG.md</a>.     
 
 
 
@@ -217,5 +220,5 @@ Feel free to contribute, this is still in beta and I have plans to include more 
 <!-- Markdown link & img dfn's -->
 
 [npm-image]: https://img.shields.io/npm/v/react-native-content-loader.svg
-[npm-url]: https://www.npmjs.com/search?q=react-native-content-loader
-[npm-downloads]: https://img.shields.io/npm/dm/react-native-content-loader.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/@sarmad1995/react-native-content-loader
+[npm-downloads]: https://img.shields.io/npm/dm/@sarmad1995/react-native-content-loader.svg?style=flat-square
