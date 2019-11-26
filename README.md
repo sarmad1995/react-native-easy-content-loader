@@ -36,6 +36,102 @@ npm install @sarmad1995/react-native-content-loader --save
 yarn add @sarmad1995/react-native-content-loader
 ```
 
+## Examples
+
+
+### Simple Example
+
+```jsx
+<ContentLoader active />
+```
+
+### With Avatar
+
+```jsx
+<ContentLoader active avatar />
+```
+
+### With Loading State
+
+```jsx
+<ContentLoader active avatar loading={this.state.loading}>
+  <Text>This would be rendered with loading is false</Text>
+</ContentLoader>
+```
+
+### Number of paragraphs
+
+```jsx
+<ContentLoader active avatar pRows={4} />
+```
+
+### Different Widths for differnt paragrahs lines
+
+```jsx
+<ContentLoader active avatar pRows={4} pWidth={["100%", 200, "25%", 45]} />
+```
+
+### Facebook and Instagram Style
+These are also flexible and customizable 
+
+Facebook loader             |  Instagram loader
+:-------------------------:|:-------------------------:
+![Facebook Style](https://user-images.githubusercontent.com/38377482/63653305-932a1880-c788-11e9-8f74-aeb758e11336.gif) |![Instagram Style](https://user-images.githubusercontent.com/38377482/63653295-7a216780-c788-11e9-9f02-88e5f71cd5cd.gif)
+
+```jsx
+import { Facebook, Instagram } from '@sarmad1995/react-native-content-loader';
+
+<Facebook active />
+
+<Instagram active />
+```
+
+### Bullets Style
+```jsx
+<Bullets active listSize={10} />
+```
+
+![Bullets Style](https://user-images.githubusercontent.com/38377482/63653257-054e2d80-c788-11e9-8b15-eb8e1c39885e.gif)
+
+
+### Default Style
+
+## It is highly customizable, please refer the options sections.
+
+```jsx
+import ContentLoader from 'react-native-content-loader';
+<ContentLoader
+  avatar
+  pRows={5}
+  pHeight={[100, 30, 20]}
+  pWidth={[100, 70, 100]}
+/>
+
+```
+
+Added custom heights and widths    |  Same with other loaders
+:---------------------------------:|:----------------------------:
+<img width="300" src="https://user-images.githubusercontent.com/38377482/69658435-2fbec800-10a2-11ea-9641-b96a3183aca4.png"/>   |  <img width="300" src="https://user-images.githubusercontent.com/38377482/69658445-36e5d600-10a2-11ea-991e-e4833e1996a2.png"/>
+
+Some more examples,
+```jsx
+<FacebookLoader pHeight={[20, 10]} />
+<ContentLoader reverse avatar pRows={5} pHeight={[40, 30, 20]} />
+
+```
+
+```jsx
+
+<ContentLoader active listSize={10} />
+```
+
+Default Loader             |  Colored 
+:-------------------------:|:-------------------------:
+![ContentLoader Style](https://user-images.githubusercontent.com/38377482/63653286-5d852f80-c788-11e9-8093-2f428e7e3daf.gif) |![ContentLoader Style](https://user-images.githubusercontent.com/38377482/63653283-434b5180-c788-11e9-84ee-f275a71334bc.gif)
+
+ 
+
+
 ## Usage
 
 ```jsx
@@ -129,108 +225,6 @@ Change the height of the image
 
 #### **`imageStyles? number`** 
 Add styles to image 
-
-
-## Examples
-
-
-### Simple Example
-
-```jsx
-<ContentLoader active />
-```
-
-### With Avatar
-
-```jsx
-<ContentLoader active avatar />
-```
-
-### With Loading State
-
-```jsx
-<ContentLoader active avatar loading={this.state.loading}>
-  <Text>This would be rendered with loading is false</Text>
-</ContentLoader>
-```
-
-### Number of paragraphs
-
-```jsx
-<ContentLoader active avatar pRows={4} />
-```
-
-### Different Widths for differnt paragrahs lines
-
-```jsx
-<ContentLoader active avatar pRows={4} pWidth={["100%", 200, "25%", 45]} />
-```
-
-### Facebook Style
-```jsx
-import { Facebook } from '@sarmad1995/react-native-content-loader';
-
-<Facebook active />
-```
-
-![Facebook Style](https://user-images.githubusercontent.com/38377482/63653305-932a1880-c788-11e9-8f74-aeb758e11336.gif)
-
-
-
-### Instagram Style
-```jsx
-import { Instagram } from '@sarmad1995/react-native-content-loader';
-
-<Instagram active />
-```
-
-![Instagram Style](https://user-images.githubusercontent.com/38377482/63653295-7a216780-c788-11e9-9f02-88e5f71cd5cd.gif)
-
-
-
-### Bullets Style
-```jsx
-import { Bullets } from '@sarmad1995/react-native-content-loader';
-
-<Bullets active listSize={10} />
-```
-
-![Bullets Style](https://user-images.githubusercontent.com/38377482/63653257-054e2d80-c788-11e9-8b15-eb8e1c39885e.gif)
-
-
-### Default Style
-
-## It is highly customizable, please refer the options sections.
-
-```
-import ContentLoader from 'react-native-content-loader';
-<ContentLoader
-  avatar
-  pRows={5}
-  pHeight={[100, 30, 20]}
-  pWidth={[100, 70, 100]}
-/>
-
-```
-
-<img width="300" src="https://user-images.githubusercontent.com/38377482/69658435-2fbec800-10a2-11ea-9641-b96a3183aca4.png"/>
-
-Some more examples,
-```
-      <FacebookLoader pHeight={[20, 10]} />
-      <ContentLoader reverse avatar pRows={5} pHeight={[40, 30, 20]} />
-
-```
-<img width="300" src="https://user-images.githubusercontent.com/38377482/69658445-36e5d600-10a2-11ea-991e-e4833e1996a2.png"/>
-
-```jsx
-
-<ContentLoader active listSize={10} />
-```
-
-![ContentLoader Style](https://user-images.githubusercontent.com/38377482/63653286-5d852f80-c788-11e9-8093-2f428e7e3daf.gif)
-
-![ContentLoader Style](https://user-images.githubusercontent.com/38377482/63653283-434b5180-c788-11e9-84ee-f275a71334bc.gif)
 
 
 
