@@ -109,10 +109,13 @@ Add styles to secondaryTitle.  **Works with only Facebook and Instagram**.
 
 ## Paragraph specific options.
 
-#### **`pHeight? string | number`** 
-Paragraph line height
+#### **`pHeight? string | number | array`** 
+Paragraph line height, 
+Can specify same height with single value, Or could use array for different widths, eg ['100%', 200, 300], you can use pHeight and pWidth to achieve different shapes as well,
+
 
 #### **`pWidth? string | number | array `** 
+Paragraph line width,
 Can specify same width with single value, Or could use array for different widths, eg ['100%', 200, 300]
 
 #### **`paragraphStyles? objecct`** 
@@ -198,8 +201,29 @@ import { Bullets } from '@sarmad1995/react-native-content-loader';
 ### Default Style
 
 ## It is highly customizable, please refer the options sections.
-```jsx
+
+```
 import ContentLoader from 'react-native-content-loader';
+<ContentLoader
+  avatar
+  pRows={5}
+  pHeight={[100, 30, 20]}
+  pWidth={[100, 70, 100]}
+/>
+
+```
+
+<img width="300" src="https://user-images.githubusercontent.com/38377482/69658435-2fbec800-10a2-11ea-9641-b96a3183aca4.png"/>
+
+Some more examples,
+```
+      <FacebookLoader pHeight={[20, 10]} />
+      <ContentLoader reverse avatar pRows={5} pHeight={[40, 30, 20]} />
+
+```
+<img width="300" src="https://user-images.githubusercontent.com/38377482/69658445-36e5d600-10a2-11ea-991e-e4833e1996a2.png"/>
+
+```jsx
 
 <ContentLoader active listSize={10} />
 ```
@@ -207,6 +231,7 @@ import ContentLoader from 'react-native-content-loader';
 ![ContentLoader Style](https://user-images.githubusercontent.com/38377482/63653286-5d852f80-c788-11e9-8093-2f428e7e3daf.gif)
 
 ![ContentLoader Style](https://user-images.githubusercontent.com/38377482/63653283-434b5180-c788-11e9-84ee-f275a71334bc.gif)
+
 
 
 ## Release History
