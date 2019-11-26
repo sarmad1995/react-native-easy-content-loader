@@ -9,13 +9,16 @@
 Provide a placeholder at the place which need waiting for loading,
 Easy to implement and fun to use, this package is highly customizable, Please go throw docs to find info :).
 
+###
+
+
 ## 
-Npm package is now [@sarmad1995/react-native-background-geolocation](https://www.npmjs.com/package/@sarmad1995/react-native-content-loader)!
+Npm package is now [@sarmad1995/react-native-content-loader](https://www.npmjs.com/package/@sarmad1995/react-native-content-loader)!
 
 ## Features
 
-- :gear: **Customizable:** Feel free to change the colors, speed, sizes, paragraphs, title and much more.;
-- ⚛️ **Lightweight:** Lightweight with only neccessory code.;
+- :gear: **Customizable:** Feel free to change the colors, speed, sizes, paragraphs, title and much more.
+- ⚛️ **Lightweight:** Lightweight with only neccessory code.
 - :tada: **Typescript:** Fully typed
 
 
@@ -205,7 +208,6 @@ import ContentLoader from 'react-native-content-loader';
 
 ![ContentLoader Style](https://user-images.githubusercontent.com/38377482/63653283-434b5180-c788-11e9-84ee-f275a71334bc.gif)
 
-                           |
 
 ## Release History
 See <a href="https://github.com/sarmad1995/react-native-content-loader/blob/master/CHANGE_LOG.md"> CHANGE_LOG.md</a>.     
