@@ -111,7 +111,7 @@ Add styles to secondaryTitle.  **Works with only Facebook and Instagram**.
 
 #### **`pHeight? string | number | array`** 
 Paragraph line height, 
-Can specify same height with single value, Or could use array for different widths, eg ['100%', 200, 300], you can use pHeight and pWidth to achieve different shapes as well,
+Can specify same height with single value, Or could use array for different heights, eg ['100%', 200, 300], you can use pHeight and pWidth to achieve different shapes as well,
 
 
 #### **`pWidth? string | number | array `** 
