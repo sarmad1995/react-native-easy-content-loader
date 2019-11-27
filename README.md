@@ -79,7 +79,7 @@ Facebook loader             |  Instagram loader
 ![Facebook Style](https://user-images.githubusercontent.com/38377482/63653305-932a1880-c788-11e9-8f74-aeb758e11336.gif) |![Instagram Style](https://user-images.githubusercontent.com/38377482/63653295-7a216780-c788-11e9-9f02-88e5f71cd5cd.gif)
 
 ```jsx
-import { Facebook, Instagram } from '@sarmad1995/react-native-content-loader';
+import { FacebookLoader, InstagramLoader } from '@sarmad1995/react-native-content-loader';
 
 <Facebook active />
 
@@ -135,7 +135,7 @@ Default Loader             |  Colored
 ## Usage
 
 ```jsx
-import ContentLoader, { Facebook, Instagram, Bullets } from '@sarmad1995/react-native-content-loader';
+import ContentLoader, { FacebookLoader, InstagramLoader, Bullets } from '@sarmad1995/react-native-content-loader';
 ```
 ```jsx
 <ContentLoader active />
