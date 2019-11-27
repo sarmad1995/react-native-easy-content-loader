@@ -7,7 +7,7 @@
 
 
 Provide a placeholder at the place which need waiting for loading,
-Easy to implement and fun to use, this package is highly customizable, Please go throw docs to find info :).
+Easy to implement and fun to use, this package is highly customizable, Please go through docs to find info :).
 
 ###
 
