@@ -81,9 +81,9 @@ Facebook loader             |  Instagram loader
 ```jsx
 import { FacebookLoader, InstagramLoader } from '@sarmad1995/react-native-content-loader';
 
-<Facebook active />
+<FacebookLoader active />
 
-<Instagram active />
+<InstagramLoader active />
 ```
 
 ### Bullets Style
