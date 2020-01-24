@@ -1,6 +1,6 @@
 {
   "name": "@sarmad1995/react-native-content-loader",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "easy content loader for react-native apps",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
