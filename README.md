@@ -241,5 +241,5 @@ Feel free to contribute, this is still in beta and I have plans to include more 
 <!-- Markdown link & img dfn's -->
 
 [npm-image]: https://img.shields.io/npm/v/@sarmad1995/react-native-content-loader.svg
-[npm-url]: https://www.npmjs.com/package/@sarmad1995/react-native-content-loader
+[npm-url]: https://www.npmjs.com/package/react-native-easy-content-loader
 [npm-downloads]: https://img.shields.io/npm/dm/rn-placeholder.svg?style=flat-square
