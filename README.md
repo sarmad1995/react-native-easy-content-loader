@@ -5,22 +5,18 @@
   <img width="400" alt="Example's react-native-easycontent-loader" src="https://user-images.githubusercontent.com/38377482/63653305-932a1880-c788-11e9-8f74-aeb758e11336.gif" />
 </p>
 
-
 Provide a placeholder at the place which need waiting for loading,
 Easy to implement and fun to use, this package is highly customizable, Please go through docs to find info :).
 
 ###
 
-
-## 
-Npm package is now [@sarmad1995/react-native-content-loader](https://www.npmjs.com/package/@sarmad1995/react-native-content-loader)!
+# I tried to move this package to @sarmad1995/react-native-content-loader, but seems like people are using this version a lot, so I will be maintaining this version from now, @sarmad1995/react-native-content-loader also has all the features.
 
 ## Features
 
 - :gear: **Customizable:** Feel free to change the colors, speed, sizes, paragraphs, title and much more.
 - ⚛️ **Lightweight:** Lightweight with only neccessory code.
 - :tada: **Typescript:** Fully typed
-
 
 ## Index
 
@@ -32,12 +28,11 @@ Npm package is now [@sarmad1995/react-native-content-loader](https://www.npmjs.c
 ## Getting Started
 
 ```sh
-npm install @sarmad1995/react-native-content-loader --save
-yarn add @sarmad1995/react-native-content-loader
+npm install react-native-easy-content-loader --save
+yarn add react-native-easy-content-loader
 ```
 
 ## Examples
-
 
 ### Simple Example
 
@@ -72,14 +67,15 @@ yarn add @sarmad1995/react-native-content-loader
 ```
 
 ### Facebook and Instagram Style
-These are also flexible and customizable 
 
-Facebook loader             |  Instagram loader
-:-------------------------:|:-------------------------:
-![Facebook Style](https://user-images.githubusercontent.com/38377482/63653305-932a1880-c788-11e9-8f74-aeb758e11336.gif) |![Instagram Style](https://user-images.githubusercontent.com/38377482/63653295-7a216780-c788-11e9-9f02-88e5f71cd5cd.gif)
+These are also flexible and customizable
+
+|                                                     Facebook loader                                                     |                                                     Instagram loader                                                     |
+| :---------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: |
+| ![Facebook Style](https://user-images.githubusercontent.com/38377482/63653305-932a1880-c788-11e9-8f74-aeb758e11336.gif) | ![Instagram Style](https://user-images.githubusercontent.com/38377482/63653295-7a216780-c788-11e9-9f02-88e5f71cd5cd.gif) |
 
 ```jsx
-import { FacebookLoader, InstagramLoader } from '@sarmad1995/react-native-content-loader';
+import { FacebookLoader, InstagramLoader } from 'react-native-easy-content-loader';
 
 <FacebookLoader active />
 
@@ -87,33 +83,33 @@ import { FacebookLoader, InstagramLoader } from '@sarmad1995/react-native-conten
 ```
 
 ### Bullets Style
+
 ```jsx
 <Bullets active listSize={10} />
 ```
 
 ![Bullets Style](https://user-images.githubusercontent.com/38377482/63653257-054e2d80-c788-11e9-8b15-eb8e1c39885e.gif)
 
-
 ### Default Style
 
 ## It is highly customizable, please refer the options sections.
 
 ```jsx
-import ContentLoader from 'react-native-content-loader';
+import ContentLoader from "react-native-easy-content-loader";
 <ContentLoader
   avatar
   pRows={5}
   pHeight={[100, 30, 20]}
   pWidth={[100, 70, 100]}
-/>
-
+/>;
 ```
 
-Added custom heights and widths    |  Same with other loaders
-:---------------------------------:|:----------------------------:
-<img width="300" src="https://user-images.githubusercontent.com/38377482/69658435-2fbec800-10a2-11ea-9641-b96a3183aca4.png"/>   |  <img width="300" src="https://user-images.githubusercontent.com/38377482/69658445-36e5d600-10a2-11ea-991e-e4833e1996a2.png"/>
+|                                                Added custom heights and widths                                                |                                                    Same with other loaders                                                    |
+| :---------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------: |
+| <img width="300" src="https://user-images.githubusercontent.com/38377482/69658435-2fbec800-10a2-11ea-9641-b96a3183aca4.png"/> | <img width="300" src="https://user-images.githubusercontent.com/38377482/69658445-36e5d600-10a2-11ea-991e-e4833e1996a2.png"/> |
 
 Some more examples,
+
 ```jsx
 <FacebookLoader pHeight={[20, 10]} />
 <ContentLoader reverse avatar pRows={5} pHeight={[40, 30, 20]} />
@@ -121,118 +117,138 @@ Some more examples,
 ```
 
 ```jsx
-
 <ContentLoader active listSize={10} />
 ```
 
-Default Loader             |  Colored 
-:-------------------------:|:-------------------------:
-![ContentLoader Style](https://user-images.githubusercontent.com/38377482/63653286-5d852f80-c788-11e9-8093-2f428e7e3daf.gif) |![ContentLoader Style](https://user-images.githubusercontent.com/38377482/63653283-434b5180-c788-11e9-84ee-f275a71334bc.gif)
-
- 
-
+|                                                        Default Loader                                                        |                                                           Colored                                                            |
+| :--------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------: |
+| ![ContentLoader Style](https://user-images.githubusercontent.com/38377482/63653286-5d852f80-c788-11e9-8093-2f428e7e3daf.gif) | ![ContentLoader Style](https://user-images.githubusercontent.com/38377482/63653283-434b5180-c788-11e9-84ee-f275a71334bc.gif) |
 
 ## Usage
 
 ```jsx
-import ContentLoader, { FacebookLoader, InstagramLoader, Bullets } from '@sarmad1995/react-native-content-loader';
+import ContentLoader, {
+  FacebookLoader,
+  InstagramLoader,
+  Bullets
+} from "react-native-easy-content-loader";
 ```
+
 ```jsx
 <ContentLoader active />
 ```
+
 ## Options
-## These Options are common with every component, 
+
+## These Options are common with every component,
 
 #### **`primaryColor?: string, rgba/hex`**
+
 Defaults to `rgba(220, 220, 220, 1)`.
 
 #### **`secondaryColor? string, rgba/hex`**
+
 Defaults to `rgba(200, 200, 200, 1)`.
 
 #### **`animationDuration? number`**
+
 Defaults to `500`. The animation transition time from primaryColor to secondaryColor
 
 #### **`loading?: bool | null`**
+
 Defaults to `null`, If given a bool value, when false, it will return children (Works as a wrapper component)
 
 #### **`active? bool`**
+
 Defaults to `false`, `true` if you want to animate the compoennt.
 
 #### **`title? bool`**
+
 Defaults to `true`. If you want to show the title, **Works only with ContentLoader**.
 
 #### **`titleStyles? object`**
+
 Add styles to title.
 
 #### **`listSize? number`**
+
 Defaults to `1`. If you want to render a list of loaders, **Works with all the loaders**.
 
 #### **`avatar? bool`**
+
 Defaults to `false`. If you want to render the avatar.
 
 #### **`aShape? string 'circle' | 'square'`**
+
 Defaults to `circle`. shape of the avatar, can be circle or square.
 
-#### **`aSize? string 'default' 'small' 'large' | number `** 
+#### **`aSize? string 'default' 'small' 'large' | number`**
+
 Defaults to `default`. can be a specific number.
 
-#### **`reverse? bool`** 
+#### **`reverse? bool`**
+
 Defaults to `false`. if you want to reverse the view.
 
-#### **`containerStyles? object`** 
-If you want to add style to container.
+#### **`containerStyles? object`**
 
+If you want to add style to container.
 
 ## Title specific options.
 
-#### **`tHeight? string | number`** 
+#### **`tHeight? string | number`**
+
 Used to change the title height.
 
-#### **`tWidth? stirng | number`** 
+#### **`tWidth? stirng | number`**
+
 Used to change the title width.
 
 #### **`sTHeight? string | number`**
-Used to change the secondary title height  **Works with only Facebook and Instagram**.
+
+Used to change the secondary title height **Works with only Facebook and Instagram**.
 
 #### **`sTWidth? string | number`**
-Used to change the secondary title width  **Works with only Facebook and Instagram**.
+
+Used to change the secondary title width **Works with only Facebook and Instagram**.
 
 #### **`titleStyles? object`**
+
 Add styles to title.
 
 #### **`secondaryTitleStyles? object`**
-Add styles to secondaryTitle.  **Works with only Facebook and Instagram**.
+
+Add styles to secondaryTitle. **Works with only Facebook and Instagram**.
 
 ## Paragraph specific options.
 
-#### **`pHeight? string | number | array`** 
-Paragraph line height, 
+#### **`pHeight? string | number | array`**
+
+Paragraph line height,
 Can specify same height with single value, Or could use array for different heights, eg ['100%', 200, 300], you can use pHeight and pWidth to achieve different shapes as well,
 
+#### **`pWidth? string | number | array`**
 
-#### **`pWidth? string | number | array `** 
 Paragraph line width,
 Can specify same width with single value, Or could use array for different widths, eg ['100%', 200, 300]
 
-#### **`paragraphStyles? objecct`** 
-Add paragraph styles
+#### **`paragraphStyles? objecct`**
 
+Add paragraph styles
 
 ## Instagram specific options.
 
-#### **`imageHeight? number`** 
+#### **`imageHeight? number`**
+
 Change the height of the image
 
-#### **`imageStyles? number`** 
-Add styles to image 
+#### **`imageStyles? number`**
 
-
+Add styles to image
 
 ## Release History
-See <a href="https://github.com/sarmad1995/react-native-content-loader/blob/master/CHANGE_LOG.md"> CHANGE_LOG.md</a>.     
 
-
-
+See <a href="https://github.com/sarmad1995/react-native-content-loader/blob/master/CHANGE_LOG.md"> CHANGE_LOG.md</a>.
 
 ## Contributing
 
@@ -240,6 +256,6 @@ Feel free to contribute, this is still in beta and I have plans to include more 
 
 <!-- Markdown link & img dfn's -->
 
-[npm-image]: https://img.shields.io/npm/v/@sarmad1995/react-native-content-loader.svg
-[npm-url]: https://www.npmjs.com/package/@sarmad1995/react-native-content-loader
+[npm-image]: https://img.shields.io/npm/v/react-native-easy-content-loader.svg
+[npm-url]: https://www.npmjs.com/package/react-native-easy-content-loader
 [npm-downloads]: https://img.shields.io/npm/dm/rn-placeholder.svg?style=flat-square
