@@ -10,7 +10,7 @@ Easy to implement and fun to use, this package is highly customizable, Please go
 
 ###
 
-# I tried to move this package to @sarmad1995/react-native-content-loader, but seems like people are using this version a lot, so I will be maintaining this version from now, @sarmad1995/react-native-content-loader also has all the features.
+### I tried to move this package to @sarmad1995/react-native-content-loader, but seems like people are using this version a lot, so I will be maintaining this version from now, @sarmad1995/react-native-content-loader also has all the features.
 
 ## Features
 
