@@ -15,11 +15,13 @@ export const startAnimationHelper = (animation: AnimationType, duration: number)
     Animated.sequence([
       Animated.timing(animation, {
         toValue: 1,
-        duration
+        duration,
+        useNativeDriver: false
       }),
       Animated.timing(animation, {
         toValue: 0,
-        duration
+        duration,
+        useNativeDriver: false
       })
     ])
   ).start();
